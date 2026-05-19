@@ -16,19 +16,14 @@
 ## 📱 Uygulama Ekran Görüntüleri (Screenshots)
 
 <p align="center">
-  <img src="screenshots/screenshot_trade.png" width="200" alt="Trade & Charts" style="margin: 10px; border-radius: 10px;" />
-  <img src="screenshots/screenshot_wallet.png" width="200" alt="My Wallet" style="margin: 10px; border-radius: 10px;" />
-  <img src="screenshots/screenshot_finagent.png" width="200" alt="FinAgent AI" style="margin: 10px; border-radius: 10px;" />
-  <img src="screenshots/screenshot_academy.png" width="200" alt="Academy & Simulator" style="margin: 10px; border-radius: 10px;" />
+  <img src="screenshots/screenshot_login.png" width="160" alt="Giriş Yap" style="margin: 5px; border-radius: 8px;" />
+  <img src="screenshots/screenshot_register.png" width="160" alt="Hesap Oluştur" style="margin: 5px; border-radius: 8px;" />
+  <img src="screenshots/screenshot_trade.png" width="160" alt="Piyasa & Grafikler" style="margin: 5px; border-radius: 8px;" />
+  <img src="screenshots/screenshot_wallet.png" width="160" alt="Cüzdanım" style="margin: 5px; border-radius: 8px;" />
+  <img src="screenshots/screenshot_finagent.png" width="160" alt="FinAgent AI" style="margin: 5px; border-radius: 8px;" />
+  <img src="screenshots/screenshot_academy.png" width="160" alt="Akademi & Simülatör" style="margin: 5px; border-radius: 8px;" />
 </p>
-## 📱 Uygulama Ekran Görüntüleri (Screenshots)
 
-<p align="center">
-  <img src="screenshots/screenshot_trade.png" width="200" alt="Trade & Charts" style="margin: 10px; border-radius: 10px;" />
-  <img src="screenshots/screenshot_wallet.png" width="200" alt="My Wallet" style="margin: 10px; border-radius: 10px;" />
-  <img src="screenshots/screenshot_finagent.png" width="200" alt="FinAgent AI" style="margin: 10px; border-radius: 10px;" />
-  <img src="screenshots/screenshot_academy.png" width="200" alt="Academy & Simulator" style="margin: 10px; border-radius: 10px;" />
-</p>
 ---
 
 ## 🌟 Öne Çıkan Özellikler
