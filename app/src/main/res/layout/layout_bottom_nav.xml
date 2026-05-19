@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/bg_secondary"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:elevation="16dp">
+
+    <LinearLayout android:id="@+id/navPiyasa"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical"
+        android:gravity="center">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_chart" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Piyasa" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/navCuzdan"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical"
+        android:gravity="center">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_wallet" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Cüzdanım" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/navFinAgent"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical"
+        android:gravity="center">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_robot" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Fin-Agent" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/navAkademi"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical"
+        android:gravity="center">
+        <ImageView android:layout_width="24dp" android:layout_height="24dp"
+            android:src="@drawable/ic_academy" android:layout_marginBottom="4dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Akademi" android:textSize="11sp" android:textColor="@color/text_secondary"/>
+    </LinearLayout>
+
+</LinearLayout>

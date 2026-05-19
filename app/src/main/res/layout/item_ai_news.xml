@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_bordered"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <!-- TOP HEADER: Symbol + Sentiment -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <!-- Symbol Badge -->
+        <TextView
+            android:id="@+id/tvNewsSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BTC"
+            android:textColor="@color/accent_green"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_chip"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <!-- Sentiment Tag -->
+        <TextView
+            android:id="@+id/tvNewsSentiment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POZİTİF"
+            android:textColor="@color/accent_green"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/bg_chip_active"/>
+    </LinearLayout>
+
+    <!-- News Title -->
+    <TextView
+        android:id="@+id/tvNewsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kripto Volatilitesi Dengeleniyor"
+        android:textColor="@color/text_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- News Summary -->
+    <TextView
+        android:id="@+id/tvNewsSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Piyasalarda Fed kararı sonrasında BTC alımları artış gösteriyor."
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- News Source -->
+    <TextView
+        android:id="@+id/tvNewsSource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✍️ Fingo AI Analist"
+        android:textColor="@color/text_secondary"
+        android:textSize="11sp"/>
+
+</LinearLayout>

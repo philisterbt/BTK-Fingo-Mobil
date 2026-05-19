@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TOP BAR -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingStart="20dp" android:paddingEnd="20dp"
+                android:paddingTop="52dp" android:paddingBottom="16dp">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                    android:background="@drawable/bg_circle" android:src="@drawable/ic_person"
+                    android:padding="8dp" android:scaleType="centerInside"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="12dp"
+                    android:text="FinGo" android:textSize="22sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <!-- ROBOT HEADER CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout android:layout_width="90dp" android:layout_height="90dp"
+                    android:background="@drawable/bg_circle_green" android:gravity="center"
+                    android:layout_marginBottom="12dp">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp"
+                        android:src="@drawable/ic_robot"
+                        app:tint="@color/accent_green"/>
+                </LinearLayout>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Fin-Agent v1.0" android:textColor="@color/text_primary"
+                    android:textSize="18sp" android:textStyle="bold" android:layout_marginBottom="6dp"/>
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical">
+                    <View android:layout_width="8dp" android:layout_height="8dp"
+                        android:background="@drawable/bg_chip_active" android:layout_marginEnd="8dp"/>
+                    <TextView android:id="@+id/tvAgentStatus"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Hazır" android:textColor="@color/accent_green"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- PSYCHOLOGY PROFILE CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Dino + Title -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView android:id="@+id/tvProfileEmoji"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="💡" android:textSize="32sp" android:layout_marginEnd="12dp"/>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView android:id="@+id/tvProfileTitle"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:text="Analiz Edilmeyi Bekliyor"
+                            android:textColor="@color/text_primary" android:textSize="16sp"
+                            android:textStyle="bold"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Yatırımcı Psikolojisi Profili"
+                            android:textColor="@color/text_secondary" android:textSize="12sp"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Sabır -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Sabır"
+                        android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvPatienceScore"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="- / 100" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                </LinearLayout>
+                <ProgressBar android:id="@+id/pbPatience"
+                    android:layout_width="match_parent" android:layout_height="6dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="0" android:progressTint="@color/accent_green"
+                    android:progressBackgroundTint="@color/bg_card_elevated"
+                    android:layout_marginBottom="14dp"/>
+
+                <!-- Risk İştahı -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Risk İştahı"
+                        android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvRiskScore"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="- / 100" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+                </LinearLayout>
+                <ProgressBar android:id="@+id/pbRisk"
+                    android:layout_width="match_parent" android:layout_height="6dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="0" android:progressTint="@color/warning_orange"
+                    android:progressBackgroundTint="@color/bg_card_elevated"
+                    android:layout_marginBottom="14dp"/>
+
+                <!-- Panik Satış -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Panik Satış İhtimali"
+                        android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvPanicScore"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-%" android:textColor="@color/error_red" android:textSize="12sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+                <ProgressBar android:id="@+id/pbPanic"
+                    android:layout_width="match_parent" android:layout_height="6dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="0" android:progressTint="@color/error_red"
+                    android:progressBackgroundTint="@color/bg_card_elevated"/>
+            </LinearLayout>
+
+            <!-- AI ADVICE CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="〜 AI Tavsiyeleri" android:textColor="@color/text_primary"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="14dp"/>
+
+                 <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_bordered" android:padding="16dp"
+                    android:layout_marginBottom="12dp">
+                    <TextView android:id="@+id/tvAiAdvice"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Portföy analizinizi başlatmak için aşağıdaki butona tıklayın."
+                        android:textColor="@color/text_primary" android:textSize="15sp"
+                        android:lineSpacingMultiplier="1.3"/>
+                 </LinearLayout>
+
+                <TextView android:id="@+id/tvLastUpdated"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Son analiz: Henüz analiz edilmedi."
+                    android:textColor="@color/text_secondary" android:textSize="12sp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRebalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="⚖️  Portföyü AI ile Yeniden Dengele"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/warning_orange"
+                    app:cornerRadius="12dp"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <!-- AI NEWS FEED CARD -->
+            <LinearLayout
+                android:id="@+id/cardNewsFeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="📰  AI Haber Bülteni (Portföye Özel)" android:textColor="@color/text_primary"
+                    android:textSize="16sp" android:textStyle="bold" android:layout_marginBottom="14dp"/>
+
+                <LinearLayout
+                    android:id="@+id/containerNewsFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+
+            <!-- CTA BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartAnalysis"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="✨  AI ile Analizi Başlat"
+                android:textColor="@color/bg_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/accent_green"
+                app:cornerRadius="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

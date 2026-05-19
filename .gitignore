@@ -1,0 +1,39 @@
+# Built-in IDE configurations
+*.iml
+.gradle
+local.properties
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+.idea/kotlinc.xml
+.idea/deploymentTargetModes.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/vcs.xml
+
+# Built artifacts
+**/build/
+build/
+app/build/
+
+# Local user configurations
+local.properties
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+
+# Kotlin / Gradle custom files
+.kotlin/
+.gradle/
+.gradle-wrapper/
+
+# NDA/Secrets Fallbacks
+secrets.properties
+*.keystore
+*.jks
+**/google-services.json

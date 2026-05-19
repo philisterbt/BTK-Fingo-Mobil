@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_bordered"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="14dp"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout android:layout_width="44dp" android:layout_height="44dp"
+        android:background="@drawable/bg_circle" android:gravity="center"
+        android:layout_marginEnd="12dp">
+        <TextView android:id="@+id/tvPositionSymbol"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="BTC" android:textColor="@color/accent_green"
+            android:textSize="10sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:orientation="vertical">
+        <TextView android:id="@+id/tvPositionName"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Bitcoin" android:textColor="@color/text_primary"
+            android:textSize="14sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvPositionAmount"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="0.45 Adet" android:textColor="@color/text_secondary"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="end">
+        <TextView android:id="@+id/tvPositionValue"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="$0.00" android:textColor="@color/text_primary"
+            android:textSize="14sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvPositionPnl"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="↑ +$0.00" android:textColor="@color/accent_green"
+            android:textSize="12sp"/>
+    </LinearLayout>
+</LinearLayout>

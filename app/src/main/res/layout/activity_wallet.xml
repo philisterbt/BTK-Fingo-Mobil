@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TOP BAR -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:paddingStart="20dp" android:paddingEnd="20dp"
+                android:paddingTop="52dp" android:paddingBottom="16dp">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                    android:background="@drawable/bg_circle" android:src="@drawable/ic_person"
+                    android:padding="8dp" android:scaleType="centerInside"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_marginStart="12dp"
+                    android:text="FinGo" android:textSize="22sp" android:textStyle="bold"
+                    android:textColor="@color/text_primary"/>
+            </LinearLayout>
+
+            <!-- BALANCE CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="24dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Sanal Bakiye" android:textColor="@color/text_secondary"
+                    android:textSize="14sp" android:layout_marginBottom="8dp"/>
+
+                <TextView android:id="@+id/tvBalance"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Yükleniyor..."
+                    android:textColor="@color/text_primary"
+                    android:textSize="34sp" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_info_banner" android:paddingStart="14dp"
+                    android:paddingEnd="14dp" android:paddingTop="8dp" android:paddingBottom="8dp">
+                    <TextView android:id="@+id/tvDailyGain"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Yükleniyor..."
+                        android:textColor="@color/accent_green" android:textSize="13sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ASSET DISTRIBUTION CARD -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:orientation="vertical"
+                android:padding="20dp" android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" android:layout_marginBottom="16dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Varlık Dağılımı"
+                        android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="◎" android:textColor="@color/text_secondary" android:textSize="18sp"/>
+                </LinearLayout>
+
+                <!-- Kripto -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Kripto"
+                        android:textColor="@color/text_primary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvAssetCryptoPct"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0%" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                </LinearLayout>
+                <ProgressBar android:id="@+id/pbAssetCrypto"
+                    android:layout_width="match_parent" android:layout_height="6dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="0" android:progressTint="@color/accent_green"
+                    android:progressBackgroundTint="@color/bg_card_elevated" android:layout_marginBottom="14dp"/>
+
+                <!-- Hisse -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Hisse"
+                        android:textColor="@color/text_primary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvAssetStockPct"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0%" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                </LinearLayout>
+                <ProgressBar android:id="@+id/pbAssetStock"
+                    android:layout_width="match_parent" android:layout_height="6dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="0" android:progressTint="@color/warning_orange"
+                    android:progressBackgroundTint="@color/bg_card_elevated" android:layout_marginBottom="14dp"/>
+
+                <!-- Nakit -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Nakit"
+                        android:textColor="@color/text_primary" android:textSize="14sp"/>
+                    <TextView android:id="@+id/tvAssetCashPct"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0%" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                </LinearLayout>
+                <ProgressBar android:id="@+id/pbAssetCash"
+                    android:layout_width="match_parent" android:layout_height="6dp"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:progress="0" android:progressTint="@color/error_red"
+                    android:progressBackgroundTint="@color/bg_card_elevated"/>
+            </LinearLayout>
+
+            <!-- OPEN POSITIONS CARD -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card" android:orientation="vertical"
+                android:padding="20dp" android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" android:layout_marginBottom="20dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="Açık Pozisyonlar"
+                        android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold"/>
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp"
+                        android:src="@drawable/ic_chart" android:alpha="0.5"/>
+                </LinearLayout>
+
+                <!-- Dinamik pozisyon satırları buraya eklenir -->
+                <LinearLayout
+                    android:id="@+id/containerPositions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

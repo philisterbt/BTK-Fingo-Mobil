@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">FinGo</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Tekrar Hoşgeldin!</string>
+    <string name="login_subtitle">Hesabına giriş yap ve piyasaları takip et.</string>
+    <string name="hint_email">E-posta adresi</string>
+    <string name="hint_password">Şifre</string>
+    <string name="btn_login">Giriş Yap</string>
+    <string name="forgot_password">Şifreni mi unuttun?</string>
+    <string name="no_account">Hesabın yok mu?</string>
+    <string name="go_register">Kayıt Ol</string>
+
+    <!-- Register Screen -->
+    <string name="register_title">Hesap Oluştur</string>
+    <string name="register_subtitle">FinGo ile sanal yatırım dünyasına adım at.</string>
+    <string name="hint_full_name">Ad Soyad</string>
+    <string name="hint_email_register">E-posta adresi</string>
+    <string name="hint_password_register">Şifre (min. 8 karakter)</string>
+    <string name="hint_password_confirm">Şifreyi tekrar gir</string>
+    <string name="btn_register">Hesap Oluştur</string>
+    <string name="has_account">Zaten hesabın var mı?</string>
+    <string name="go_login">Giriş Yap</string>
+    <string name="terms_agree">Devam ederek Kullanım Koşullarını kabul etmiş olursun.</string>
+
+    <!-- Common -->
+    <string name="or_divider">veya</string>
+    <string name="continue_google">Google ile devam et</string>
+    <string name="virtual_balance_info">50.000 TL sanal bakiye ile başla 🚀</string>
+</resources>
